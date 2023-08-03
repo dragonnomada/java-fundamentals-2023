@@ -1,0 +1,17 @@
+S1 - Ejercicios:
+
+E101 - Reportar si un punto se encuentra dentro/fuera de un circulo
+
+E102 - Determina el area de un triángulo usando la ecuación general
+
+       Triángulo con lados: a, b, c
+
+       s = (a + b + c) / 2
+
+       area = RAIZ( s * (s - a) * (s - b) * (s - c) )
+
+E103 - Convertir una temperatura dada en centigrados a fahrenheit
+
+       °F -> 1.8 * °C + 32
+
+E104 - El punto de intersección entre dos rectas
