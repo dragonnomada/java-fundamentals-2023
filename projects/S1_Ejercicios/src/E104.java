@@ -3,13 +3,13 @@ public class E104 {
 
 	public static void main(String[] args) {
 		
-		double a1x = 0;
-		double a1y = 0;
-		double a2x = 1;
-		double a2y = 1;
-		double b1x = 0;
-		double b1y = 1;
-		double b2x = 1;
+		double a1x = -1;
+		double a1y = -1;
+		double a2x = 3;
+		double a2y = 6;
+		double b1x = -1;
+		double b1y = 4;
+		double b2x = 8;
 		double b2y = 0;
 		
 		// a * t + b * s = f
