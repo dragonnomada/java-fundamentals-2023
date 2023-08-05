@@ -1,0 +1,7 @@
+S2 - Ejercicios
+
+E105 - Modificar la clase FileConvertionsDemo para generar un reporte en una carpeta local diferente a la propuesta en el código (podría fallar esa ruta)
+
+E106 - Completar la clase FileLoadsDemo para que extraiga los datos faltantes del reporte (existencias, estante, código de barras, latitud y longitud)
+
+E107 - Solicitar los datos para el contrato de un cliente (por ejemplo, un pagaré que solicite nombre, rfc de cliente y prestador, monto, fecha de endoso, etc.). Usa variables de distintos tipos y la clase Scanner. Guarda el reporte línea por línea en un archivo.
