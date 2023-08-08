@@ -1,0 +1,18 @@
+S4 - E107 Menú Transaccional 
+          para FrutaRepository
+
+1. Crea una clase llamada FrutaMenu con un método principal (main)
+2. Crea una instancia de FrutaRepository y una instancia para un Scanner
+3. Crear un ciclo condicional infinito (while (true) {...}) para mostrar un menú con las siguientes opciones:
+	Selecciona una opción:
+	------------------------------------
+	1. Consultar una Fruta por ID
+	2. Consultar una Fruta por Nombre
+	3. Agregar una Fruta
+	4. Quitar la última Fruta
+	5. Quitar una Fruta por ID
+	------------------------------------
+	0. Salir
+4. Leer la opción desde el escáner y determinar el bloque de ejecución usando if-else-if-else (if (opcion == 1) { ... })
+5. Dependiendo la opción, por ejemplo, 1. Consultar una Fruta por ID, entonces solicitar desde el escáner el ID de la fruta a consultar, recuperar la fruta desde el repositorio (frutaRepository) e imprimir la fruta encontrada. Si, por ejemeplo, la opción es 3, entonces, solicitar el ID de la fruta, el nombre de la fruta y el precio y agregar la fruta mediante el repositorio (frutaRepository) e imprimir la fruta agregada y un mensaje que explique que se agregó. Así para cada opción del menú y al final del ciclo se repetirá nuevamente el menú.
+6. [Opcional] Limpia la terminal antes de imprimir el menú.

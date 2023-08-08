@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileWriter;
 import java.util.Arrays;
 
 /*
@@ -137,11 +139,41 @@ public class FrutaRepository {
 		return null;
 	}
 
+	// GUARDAR FRUTAS
+	public void guardarFrutas() {
+		
+		File file = new File("D:\\java-environment\\temporal\\frutas.txt");
+		
+		try {
+			FileWriter fileWriter = new FileWriter(file);
+			
+			StringBuilder frutaText = new StringBuilder();
+
+			for (Fruta fruta : frutas) {
+				
+				if (fruta == null) continue;
+				
+				frutaText.append(fruta.getId());
+				frutaText.append(" ");
+				frutaText.append(fruta.getNombre());
+				frutaText.append(" $");
+				frutaText.append(fruta.getPrecio());
+				frutaText.append("\n");
+				
+			}
+
+			fileWriter.write(frutaText.toString());
+			
+			fileWriter.close();
+		} catch (Exception e) {
+			System.out.println("ERROR AL GUARDAR EL ARCHIVO");
+			e.printStackTrace();
+		}
+	}
+	
 	@Override
 	public String toString() {
 		return "FrutaRepository [frutas=" + Arrays.toString(frutas) + ", lastIndex=" + lastIndex + "]";
 	}
-
-	// MÁS CONSULTAS...
 
 }
