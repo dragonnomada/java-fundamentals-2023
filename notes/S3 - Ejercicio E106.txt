@@ -1,0 +1,16 @@
+S3 - E106 Manejo de clases
+
+Crear una clase que retenga los datos de una fruta y permita su acceso de lectura y escritura bajo las siguientes condiciones:
+
+id, nombre, precio
+
+nombre debe cumplir la expresión regular: 
+[A-Z][a-z]+
+
+precio debe ser mayor o igual a 0.01 y menor a 1000
+
+id no puede ser modificado
+
+Incluir un método público llamado void describir que imprima los datos de Fruta con el formato:
+
+"[%d] %s ($%.2f)", id, nombre, precio
