@@ -1,0 +1,16 @@
+S5 - E108 Productos con Persistencia
+
+Diseñar una clase llamada Producto que reciba en el constructor:
+
+int id
+
+Y leeremos el archivo [id].txt para extraer el nombre (String primera línea), el precio (double segunda línea) y las existencias (int tercera línea). Diseña un método llamado cargar o recuperar.
+
+Si el archivo no existe solo ajustar el id.
+
+En los métodos SETTER para nombre, precio y existencias, mandar a guardar los datos del producto en el archivo [id].txt (diseña un método llamado guardar o almacenar)
+
+Primera línea: String nombre
+Primera línea: double precio
+Primera línea: int existencias
+
