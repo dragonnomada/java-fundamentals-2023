@@ -7,19 +7,20 @@ public class FrutaMenu {
 		
 		FrutaRepository frutaRepository = new FrutaRepository();
 		
-		//frutaRepository.cargarFrutas();
+		frutaRepository.cargarFrutas();
 		
 		Scanner scanner = new Scanner(System.in);
-		
+		 
 		while (true) {
 			
 			System.out.println("Selecciona una opción");
 			System.out.println("--------------------------");
-			System.out.println("1. Consultar Fruta por ID");
-			System.out.println("2. Consultar Fruta por Nombre");
-			System.out.println("3. Agregar Fruta");
-			System.out.println("4. Quitar última Fruta");
-			System.out.println("5. Quitar Fruta por ID");
+			System.out.println("1. Consultar todas las Frutas");
+			System.out.println("2. Consultar Fruta por ID");
+			System.out.println("3. Consultar Fruta por Nombre");
+			System.out.println("4. Agregar Fruta");
+			System.out.println("5. Quitar última Fruta");
+			System.out.println("6. Quitar Fruta por ID");
 			System.out.println("--------------------------");
 			System.out.println("0. Salir");
 			
@@ -28,6 +29,11 @@ public class FrutaMenu {
 			scanner.nextLine();
 			
 			if (opcion == 1) {
+				System.out.printf("--- FRUTAS (%d) ---%n", frutaRepository.total());
+				for (Fruta fruta : frutaRepository.consultarFrutasTodas()) {
+					System.out.println(fruta);
+				}
+			} else if (opcion == 2) {
 				// TODO: Consultar fruta por Id
 				System.out.print("ID: ");
 				int id = scanner.nextInt();
@@ -39,7 +45,7 @@ public class FrutaMenu {
 				} else {
 					System.out.println("No se encuentra la fruta: " + id);
 				}
-			} else if (opcion == 3) {
+			} else if (opcion == 4) {
 				System.out.print("ID: ");
 				int id = scanner.nextInt();
 				scanner.nextLine();

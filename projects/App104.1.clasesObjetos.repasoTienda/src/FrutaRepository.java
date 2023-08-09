@@ -1,6 +1,9 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Arrays;
+import java.util.Scanner;
+//import java.util.regex.Matcher;
+//import java.util.regex.Pattern;
 
 /*
  * CLASE TRANSACCIONAL -> REPOSITORIO
@@ -22,6 +25,25 @@ public class FrutaRepository {
 	private Fruta[] frutas = new Fruta[100]; // Fruta
 	private int lastIndex = 0;
 
+	public int total() {
+		return lastIndex;
+	}
+	
+	public Fruta[] consultarFrutasTodas() {
+		
+		if (total() == 0) return null;
+		
+		Fruta[] frutasTotal = new Fruta[total()];
+		
+		int index = 0;
+		for (Fruta fruta : frutas) {
+			if (index >= total()) break;
+			frutasTotal[index++] = fruta;
+		}
+		
+		return frutasTotal;
+	}
+	
 	// AGREGA FRUTA AL FINAL (PONE ÚLTIMA)
 	public Fruta agregarFrutaFinal(int id, String nombre, double precio) {
 		if (lastIndex >= frutas.length) {
@@ -105,13 +127,13 @@ public class FrutaRepository {
 	}
 
 	// CONSULTAR FRUTA POR ÍNDICE
-	private Fruta consultarFrutaPorIndice(int indice) {
-		if (indice < 0 || indice >= lastIndex) {
-			return null;
-		}
-
-		return frutas[indice];
-	}
+//	private Fruta consultarFrutaPorIndice(int indice) {
+//		if (indice < 0 || indice >= lastIndex) {
+//			return null;
+//		}
+//
+//		return frutas[indice];
+//	}
 
 	// CONSULTAR FRUTA POR ID
 	public Fruta consultarFrutaPorId(int id) {
@@ -137,6 +159,49 @@ public class FrutaRepository {
 		}
 
 		return null;
+	}
+	
+	// CARGAR FRUTAS
+	public void cargarFrutas() {
+		File file = new File("D:\\java-environment\\temporal\\frutas.txt");
+		
+		try {
+			Scanner scannerFile = new Scanner(file);
+			
+			while (scannerFile.hasNextLine()) {
+				String line = scannerFile.nextLine();
+				
+				if (line.isEmpty()) continue;
+				
+				Scanner scannerLine = new Scanner(line);
+				
+//				Pattern pattern = Pattern.compile("(\\d+)\\s*([^\\$]+)\\$(\\d\\.?\\d*)");
+//				
+//				Matcher matcher = pattern.matcher(line);
+//				
+//				int id = Integer.parseInt(matcher.group(1));
+//				String nombre = matcher.group(2);
+//				double precio = Double.parseDouble(matcher.group(3));
+				
+				int id = scannerLine.nextInt();
+				scannerLine.findInLine("\\s*");
+				
+				String nombre = scannerLine.findInLine("[^\\$]+");
+				scannerLine.findInLine("\\$\\s*");
+				nombre = nombre.replaceAll("\\s+$", "");
+				
+				double precio = scannerLine.nextDouble();
+				
+				agregarFrutaFinal(id, nombre, precio);
+				
+				scannerLine.close();
+			}
+			
+			scannerFile.close();
+		} catch (Exception e) {
+			System.out.println("ERROR AL LEER EL ARCHIVO");
+			e.printStackTrace();
+		}
 	}
 
 	// GUARDAR FRUTAS
