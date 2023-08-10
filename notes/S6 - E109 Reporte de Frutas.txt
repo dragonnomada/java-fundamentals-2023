@@ -1,0 +1,15 @@
+S6 - E109 Reporte de Frutas
+
+1. Diseña la clase Fruta que tenga un id, nombre y un precio
+
+2. Diseña la clase ReporteFruta que contenga una lista de tipo List<Fruta> y permita agregar frutas.
+
+3. Agregar un método llamado `repote1` dentro de `ReporteFruta` que imprima todas las frutas y el número de caracteres.
+
+4. Agregar un método llamado `repote2` dentro de `ReporteFruta` que imprima todas las frutas y su precio.
+
+5. Agregar un método llamado `repote3` dentro de `ReporteFruta` que imprima todas las frutas que comienzan con el nombre "TROPICAL:".
+
+6. Crea una clase derivada de Fruta que se llame Maracuya que establezca el nombre a "TROPICAL: Maracuyá" con precio fijo de $99.99
+
+7. Prueba `ReporteFruta` con varias frutas manuales y de tipo Maracuya.
