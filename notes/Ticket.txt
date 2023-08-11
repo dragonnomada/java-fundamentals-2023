@@ -1,0 +1,18 @@
+Ticket:
+
+List<Producto> productos
+Date fechaEmision
+double calcularTotal()
+
+Venta
+
+List<Producto> productos
+Date fechaInicio
+Date fechaCierre
+boolean cancelada
+
+void iniciarVenta()
+void agregarProducto()
+Ticket generarTicket()
+void cerrarVenta()
+void cancelarVenta()
