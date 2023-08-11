@@ -1,0 +1,10 @@
+S7 - E110 - MANEJO DE INTERFACES
+
+1. Crea la clase Libro o Fruta con sus propiedades y métodos que consideres.
+
+2. Haz que la clase Libro o Fruta implemente la interfaz Producto, con la mejor adaptación posible.
+
+3. Integra en TestCarritoCompras el código necesario para agregar un Libro o Fruta al carrito en la opción 101 o 102.
+
+4. Haz varias pruebas verificando si el carrito funciona para playeras, libros y frutas al mismo tiempo.
+
