@@ -1,0 +1,14 @@
+Dominio de Java
+------------------------------------------------
+Entender el concepto de POO
+Diseñar Clases (Propiedades y Métodos)
+Diseño de Constructores
+Sobrecarga de Métodos
+Encapsulamiento (Niveles de Acceso private, protected, default y public a propiedades y métodos)
+Herencia (Extender clases para aumentar o sobreescribir propiedades y métodos)
+Interfaces (Son conjuntos de métodos que describen funcionales comunes para generar nuevos tipos funcionales)
+---
+Manejo Excepciones (Control de excepciones mediante try-catch o la propagación de excepciones mediante throw/throws y la clase Exception)
+Expresiones lambda (Interfaces singleton o de un sólo método, como Runnable, Thread y ActionLister)
+===
+Aplicación más completa (uso de interfaces de usario de Swing y bases de datos, considerando: El uso de interfaces, constructores y sobrecarga)
